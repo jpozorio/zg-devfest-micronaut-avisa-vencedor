@@ -22,9 +22,10 @@ class Sorteador {
 		return resultadoSorteio
 	}
 
-	void sorteiaEAvisa() {
+	String sorteiaEAvisa() {
 		final ResultadoSorteio resultadoSorteio = sorteiaVencedor()
 		MailSender mailSender = new MailSender(resultadoSorteio)
 		mailSender.avisaTodos()
+		return resultadoSorteio.vencedor
 	}
 }
