@@ -61,9 +61,6 @@ Linktree: https://linktr.ee/zgsolucoes
 
 			Mail mail = new Mail(from, subject, to, content)
 
-			Personalization personalization = mail.personalization.get(0)
-			personalization.addCc(new Email('joaopaulo@zgsolucoes.com.br'))
-
 			SendGrid sg = new SendGrid(System.getenv('SENDGRID_ENV'))
 			Request request = new Request()
 			try {
